@@ -1,0 +1,105 @@
+.formContainer {
+    position: relative;
+    padding: 2rem;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.formTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.message {
+    color: var(--gray-900);
+    margin-bottom: 1rem;
+}
+
+.input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    transition: border-color 0.3s;
+    box-shadow: none;
+    outline: none;
+}
+
+.select:focus{
+    border-color: #F75A68;
+    outline: none;
+}
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-color: #ccc;
+}
+
+.btnPrimary {
+    background-color: #F75A68;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btnPrimary:hover {
+    background-color: #e14d5b;
+}
+
+.btnPrimary:active {
+    background-color: #c6404f;
+    transform: scale(0.98);
+}
+
+@media (max-width: 48rem) {
+    .formContainer {
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .input, .select {
+        font-size: 0.9rem;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .btnPrimary {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.closeButton:hover {
+    color: #F75A68;
+}
+
+
