@@ -31,8 +31,17 @@ describe("Testando rotas", () => {
         }
         const response = await request(app)
             .post(`/vehicle/create`)
+            .send(dataVehicle)
             .expect(500);
 
-        expect(response.body).toHaveProperty("message", "Erro ao criar veiculo.");
+        expect(response.body).toHaveProperty("message", "Veículo já existente.");
+    });
+
+    it("Deve listar motoristas existentes", async () => {
+        const response = await request(app)
+            .get(`/drivers/get`)
+            .expect(200);
+
+        expect(Array.isArray(response.body)).toBe(true);
     });
 });
